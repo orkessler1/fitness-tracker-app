@@ -1,1 +1,117 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Daily Fitness Tracker</h1>
+
+    <section class="card">
+      <h2>Daily Goals</h2>
+
+      <div class="form-row">
+        <label for="target-calories">Target Calories</label>
+        <input
+          type="number"
+          id="target-calories"
+          placeholder="e.g. 2000"
+          min="0"
+        />
+      </div>
+
+      <div class="form-row">
+        <label for="target-protein">Target Protein (g)</label>
+        <input
+          type="number"
+          id="target-protein"
+          placeholder="e.g. 120"
+          min="0"
+        />
+      </div>
+
+      <button id="save-goals-btn">Save Goals</button>
+    </section>
+
+    <section class="card">
+      <h2>Add Meal</h2>
+
+      <div class="form-row">
+        <label for="meal-name">Meal Name</label>
+        <input
+          type="text"
+          id="meal-name"
+          placeholder="e.g. Chicken salad"
+        />
+      </div>
+
+      <div class="form-row">
+        <label for="meal-calories">Calories</label>
+        <input
+          type="number"
+          id="meal-calories"
+          placeholder="e.g. 450"
+          min="0"
+        />
+      </div>
+
+      <div class="form-row">
+        <label for="meal-protein">Protein (g)</label>
+        <input
+          type="number"
+          id="meal-protein"
+          placeholder="e.g. 35"
+          min="0"
+        />
+      </div>
+
+      <button id="add-meal-btn">Add Meal</button>
+    </section>
+
+    <section class="card">
+      <h2>Summary</h2>
+
+      <div class="summary-row">
+        <span>Calories consumed:</span>
+        <span id="calories-consumed">0</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Calories remaining:</span>
+        <span id="calories-remaining">0</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Protein consumed (g):</span>
+        <span id="protein-consumed">0</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Protein remaining (g):</span>
+        <span id="protein-remaining">0</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Meals</h2>
+
+      <table class="meals-table">
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th>Calories</th>
+            <th>Protein (g)</th>
+          </tr>
+        </thead>
+        <tbody id="meals-tbody">
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
